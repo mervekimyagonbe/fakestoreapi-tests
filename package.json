@@ -1,0 +1,12 @@
+{
+  "name": "fakestoreapi-tests",
+  "version": "1.0.0",
+  "description": "Cypress API tests for FakeStoreAPI",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^14.5.2"
+  }
+}
