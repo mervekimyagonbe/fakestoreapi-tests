@@ -25,11 +25,11 @@ Aşağıda Cypress testlerinin başarılı şekilde çalıştığını gösteren
 npm install
 npx cypress open
 
-## 🚀 Performance Test (Artillery)
+##  Performance Test (Artillery)
 
 Bu projede FakeStore API için **Artillery** kullanılarak bir performans (yük) testi oluşturulmuştur.
 
-### 📌 Test Yapısı
+##  Test Yapısı
 
 Yük testi iki fazdan oluşmaktadır:
 
@@ -39,7 +39,7 @@ Yük testi iki fazdan oluşmaktadır:
 - **Stress Test Phase:**  
   120 saniye boyunca saniyede 20 kullanıcı ile stres testi uygulanmıştır.
 
-### 🔄 Test Akışı (Scenario)
+##  Test Akışı (Scenario)
 
 Senaryo aşağıdaki adımları içermektedir:
 
@@ -49,7 +49,7 @@ Senaryo aşağıdaki adımları içermektedir:
 POST isteği için veriler `payload.csv` dosyasından alınmıştır.  
 (`userId`, `date`, `products` alanları kullanılmaktadır.)
 
-### 📊 Performans Kriterleri (Thresholds)
+##  Performans Kriterleri 
 
 Test sırasında aşağıdaki metrikler doğrulanmıştır:
 
@@ -57,7 +57,7 @@ Test sırasında aşağıdaki metrikler doğrulanmıştır:
 - `http.response_time.p99 < 1000 ms`  
 - `http.requests.failed = 0`
 
-### ▶️ Çalıştırma
+##  Çalıştırma
 
 ```bash
 npm install -g artillery
