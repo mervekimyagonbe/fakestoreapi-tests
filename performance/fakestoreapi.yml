@@ -1,0 +1,46 @@
+config:
+  target: "https://fakestoreapi.com"
+
+  phases:
+    - name: "Warm Up Phase"
+      duration: 60
+      arrivalRate: 5
+
+    - name: "Stress Test Phase"
+      duration: 120
+      arrivalRate: 20
+
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+  payload:
+    path: "payload.csv"
+    fields:
+      - userId
+      - date
+      - products
+
+  plugins:
+    ensure:
+      thresholds:
+        http.response_time.p95: 500
+        http.response_time.p99: 1000
+        http.requests.failed: 0
+
+scenarios:
+  - name: "FakeStore API GET and POST Performance Test"
+    flow:
+      - get:
+          url: "/products"
+          expect:
+            - statusCode: 200
+
+      - post:
+          url: "/carts"
+          json:
+            userId: "{{ userId }}"
+            date: "{{ date }}"
+            products: "{{ products }}"
+          expect:
+            - statusCode: 200

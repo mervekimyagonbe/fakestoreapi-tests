@@ -1,0 +1,4 @@
+userId,date,products
+1,2025-01-01,"[{""productId"":1,""quantity"":2}]"
+2,2025-01-02,"[{""productId"":2,""quantity"":1}]"
+3,2025-01-03,"[{""productId"":3,""quantity"":4}]"
