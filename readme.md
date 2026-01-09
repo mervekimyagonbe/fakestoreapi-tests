@@ -25,6 +25,7 @@ Aşağıda Cypress testlerinin başarılı şekilde çalıştığını gösteren
 npm install
 npx cypress open
 
+
 ##  Performance Test (Artillery)
 
 Bu projede FakeStore API için **Artillery** kullanılarak bir performans (yük) testi oluşturulmuştur.
