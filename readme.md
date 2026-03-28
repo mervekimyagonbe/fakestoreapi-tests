@@ -62,4 +62,4 @@ Test sırasında aşağıdaki metrikler doğrulanmıştır:
 
 ```bash
 npm install -g artillery
-artillery run fakestoreapi.yml bu readme yi düzelt. performans testleri çalıştırma kısmında gözüküyor neden öyle oldu
+artillery run fakestoreapi.yml 
