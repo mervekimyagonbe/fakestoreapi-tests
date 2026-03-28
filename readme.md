@@ -20,12 +20,6 @@ Aşağıda Cypress testlerinin başarılı şekilde çalıştığını gösteren
 
 ![Cypress Test Result](screenshots/fsa.png)
 
-## Çalıştırma
-```bash
-npm install
-npx cypress open
-
-
 ##  Performance Test (Artillery)
 
 Bu projede FakeStore API için **Artillery** kullanılarak bir performans (yük) testi oluşturulmuştur.
@@ -58,7 +52,13 @@ Test sırasında aşağıdaki metrikler doğrulanmıştır:
 - `http.response_time.p99 < 1000 ms`  
 - `http.requests.failed = 0`
 
-##  Çalıştırma
+## Otomasyon testleri Çalıştırma
+```bash
+npm install
+npx cypress open
+
+
+## Yük Testleri Çalıştırma
 
 ```bash
 npm install -g artillery
